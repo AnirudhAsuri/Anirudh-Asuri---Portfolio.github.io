@@ -3,51 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "stylesheet" href = "style.css">
-    <title>Anirudh Asuri - Portfolio</title>
+    <link rel="icon" type="image/png" href="https://placehold.co/32x32/0a0a2e/6cf?text=AA">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Anirudh Asuri - Game Developer</title>
 </head>
 <body>
     
     <header>
-        <span style = "margin-left: 10px;">Anirudh Asuri</span>
-        <span class = "right-aligned">
-            <a href = "index.html">Home</a>
-            <a href = "education.html">Education</a>
-            <a href = "projects.html">Projects</a>
-            <a>CronyMania</a>
+        <span style="margin-left: 10px; font-weight: bold;">Anirudh Asuri</span>
+        <span class="right-aligned">
+            <a href="#home">Home</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+            <a href="https://cronymania.itch.io" target="_blank">itch.io</a>
         </span>
     </header>
 
-    <hr>
-    
     <main>
-
-        <div align = "center">
+        <!-- ===== HOME SECTION ===== -->
+        <section id="home">
             <h1>ANIRUDH ASURI</h1>
-            <h2>An amateur game developer.</h2>
+            <h2>Game Developer | AI & Gameplay Programmer</h2>
+            <p>
+                I'm Anirudh Asuri, a game developer specializing in AI and gameplay mechanics. I build dynamic and intelligent enemy behaviors and create compelling user experiences in Unity and C#. 
+                <br><br>
+                Currently pursuing a B.Tech in CSE with a specialization in AI & Machine Learning, I thrive on solving complex technical challenges to bring creative visions to life. I have experience in collaborative environments and am dedicated to mastering the craft of game development.
+            </p>
+        </section>
 
-            <p>Hey, I'm Anirudh Asuri.
-            I am currently pursuing a B.Tech in Computer Science & Engineering with a specialization in <span style = "color:rgb(255, 0, 51)">Artificial Intelligence & Machine Learning</span>, but my true focus lies in Game Development.
-            <br>
-            <br>
-            Game development, to me, is built on passion, discipline, and perseverance—qualities I take pride in. My fascination with games has always gone beyond just playing them. I've been deeply curious about the underlying systems and mechanics that bring them to life.
-            <br>
-            <br>
-            I am highly dedicated to mastering the craft of GameDev and continuously strive to grow both creatively and technically. Along the way, I've gained valuable experience in collaboration, working with diverse groups of people during my school and college years. I strongly believe that teamwork is at the heart of every successful project.
-            <h3>Check out my work for free here in my itch.io page - <a href = https://cronymania.itch.io target = _blank title = "My itch.io page.">CronyMania</a></h3>
-        </div>
+        <!-- ===== PROJECTS SECTION ===== -->
+        <section id="projects">
+            <h1>My Projects</h1>
+
+            <div class="project-card">
+                <h2>Real-Time Adaptive Enemy AI</h2>
+                <p>A lightweight system for 1v1 enemy behavior, reacting in real-time using weighted decision making. No machine learning required—just pure game logic!</p>
+                <div class="tech-stack">
+                    <span>Unity</span>
+                    <span>C#</span>
+                    <span>AI Behavior</span>
+                    <span>System Design</span>
+                </div>
+                <a href="https://github.com/AnirudhAsuri/Mini-Project-01.git" target="_blank" class="button">View on GitHub →</a>
+            </div>
+
+            <div class="project-card">
+                <h2>4-Day Escape Room Challenge</h2>
+                <p>A compact first-person escape room made in just 4 days. Explore, solve puzzles, and survive in a tense low-light environment.</p>
+                <div class="tech-stack">
+                    <span>Unity</span>
+                    <span>Level Design</span>
+                    <span>Puzzle Mechanics</span>
+                    <span>Rapid Prototyping</span>
+                </div>
+                <a href="https://cronymania.itch.io/can-you-escape" target="_blank" class="button">Play on itch.io →</a>
+            </div>
+
+            <div class="project-card">
+                <h2>Context Steering in 3D</h2>
+                <p>A navigation AI system adapted from 2D to 3D environments, enabling custom movement without Unity’s built-in navmesh.</p>
+                 <div class="tech-stack">
+                    <span>Unity</span>
+                    <span>C#</span>
+                    <span>3D Math</span>
+                    <span>Vector Fields</span>
+                    <span>Navigation AI</span>
+                </div>
+                <a href="https://cronymania.itch.io/context-steering-3d-ponchon-demo" target="_blank" class="button">View Demo →</a>
+            </div>
+            
+            <div class="project-card">
+                <h2>Ponchon</h2>
+                <p>A chaotic 3D game about punching capsule enemies, built from the Context Steering demo. My first full release!</p>
+                <div class="tech-stack">
+                    <span>Unity</span>
+                    <span>C#</span>
+                    <span>Game Mechanics</span>
+                    <span>Release Management</span>
+                </div>
+                <span style="color:#ff6bcb; font-weight:bold; display: block; text-align: center; margin-top: 1rem;">Coming soon...</span>
+            </div>
+
+            <div class="project-card">
+                <h2>Phase 10 Digital</h2>
+                <p>A digital adaptation of the card game “Phase 10” that my friends and I love. Still in development, with core mechanics already in place.</p>
+                <div class="tech-stack">
+                    <span>Unity</span>
+                    <span>C#</span>
+                    <span>UI/UX</span>
+                    <span>System Design</span>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ===== EDUCATION SECTION ===== -->
+        <section id="education">
+            <h1>Education</h1>
+            <div class="education-table-container">
+                <table>
+                    <tr>
+                        <th>Qualification</th>
+                        <th>Institution</th>
+                        <th>Duration/Year</th>
+                        <th>CGPA</th>
+                    </tr>
+                    <tr>
+                        <td>B.Tech, CSE(AI&ML)</td>
+                        <td>Nalla Malla Reddy Engineering College</td>
+                        <td>2022 - 2026</td>
+                        <td>9.2</td>
+                    </tr>
+                    <tr>
+                        <td>Senior Secondary (XII)</td>
+                        <td>Little Flower Junior College</td>
+                        <td>2020 - 2022</td>
+                        <td>9.35</td>
+                    </tr>
+                    <tr>
+                        <td>Secondary (X), CBSE</td>
+                        <td>St. Peter's Model School</td>
+                        <td>2020</td>
+                        <td>8.40</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
     </main>
 
-    <hr>
-
     <footer>
-        LinkdIn - <a href = "https://www.linkedin.com/in/anirudh-asuri-070b32316" target = _blank title = "My LinkdIn Account.">Anirudh Asuri LinkdIn</a>
+        LinkdIn - <a href="https://www.linkedin.com/in/anirudh-asuri-070b32316" target="_blank">Anirudh Asuri</a>
+        <span class="footer-separator">|</span>
+        GitHub - <a href="https://github.com/AnirudhAsuri" target="_blank">AnirudhAsuri</a>
         <br>
         Email - cronymania@gmail.com (or) asurianirudh@gmail.com
         <br>
         Phone/WhatsApp - +91 63045 34506
-        <br>
-        GitHub - <a href = "https://github.com/AnirudhAsuri" target = _blank title = "My GitHub Page.">Anirudh Asuri</a>
     </footer>
+
+    <script>
+        // SCRIPT FOR ON-SCROLL FADE-IN ANIMATION
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        document.querySelectorAll('.project-card').forEach(card => {
+            observer.observe(card);
+        });
+
+        // SCRIPT FOR 3D TILT EFFECT
+        document.querySelectorAll(".project-card").forEach(card => {
+            card.addEventListener("mousemove", (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = ((y - centerY) / centerY) * 8; // Reduced tilt for subtlety
+                const rotateY = ((x - centerX) / centerX) * -8;
+
+                if (card.classList.contains('visible')) {
+                    card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.03)`;
+                }
+            });
+
+            card.addEventListener("mouseleave", () => {
+                card.style.transform = "rotateX(0) rotateY(0) scale(1)";
+            });
+        });
+    </script>
+
 </body>
 </html>
+

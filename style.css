@@ -1,91 +1,275 @@
-body
-{
-    background-color: aqua;
+/* Reset */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-h1
-{
+/* Global */
+html {
+    scroll-behavior: smooth; /* Enables smooth scrolling for anchor links */
+}
+
+body {
+    font-family: 'VT323', monospace; /* Old-school monospaced font */
+    font-size: 20px; /* Pixel fonts look better slightly larger */
+    background: linear-gradient(to bottom, #0a0a2e, #1a1a4d);
+    color: #a2f2a2; /* Softer, more readable green text color */
+    line-height: 1.7;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* CRT Scanline Overlay Effect */
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.25) 0px,
+        rgba(0, 0, 0, 0.25) 1px,
+        transparent 1px,
+        transparent 3px
+    );
+    pointer-events: none; /* Allows clicking through the overlay */
+    z-index: 9999;
+}
+
+
+/* Header */
+header {
+    background: rgba(10, 10, 50, 0.9);
+    color: #fff;
+    padding: 1.25rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+    font-size: 1.2rem;
+    border-bottom: 2px solid #4a4a8a;
+}
+
+header a {
+    color: #e0e6ff;
+    text-decoration: none;
+    margin-left: 1.8rem;
+    transition: color 0.3s;
+}
+
+header a:hover {
+    color: #ff6bcb;
+}
+
+/* Main Content Wrapper */
+main {
+    flex: 1;
+}
+
+/* Section Styling */
+section {
+    padding: 4rem 1rem;
+    border-bottom: 2px solid #2a2a5c;
+}
+
+section:last-of-type {
+    border-bottom: none;
+}
+
+/* Hero Titles */
+h1 {
+    font-family: 'VT323', monospace; /* Unified font theme */
+    font-size: 4rem; /* Increased size for impact */
+    margin-bottom: 1rem;
     text-align: center;
-    color: orangered;
-    font-size: 200px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-header
-{
-    background-color: crimson;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 30px;
-    color: blanchedalmond;
+    color: #6cf;
+    text-shadow: 3px 3px 0px rgba(0,0,0,0.7); /* Sharp 8-bit style shadow */
 }
 
-footer
-{
+h2 {
+    font-family: 'VT323', monospace;
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #ff6bcb;
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.7); /* Sharp 8-bit style shadow */
+}
+
+/* Paragraphs */
+p {
+    max-width: 850px;
+    margin: 1rem auto;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+/* Project Cards */
+.project-card {
+    background: rgba(10, 20, 40, 0.85);
+    border-radius: 0;
+    border: 2px solid #6cf;
     padding: 2rem;
-    text-align: center;
-    margin: 2px;
-    background-color: crimson;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 15px;
-    color: blanchedalmond;
+    margin: 2rem auto;
+    max-width: 950px;
+    box-shadow: 0 0 15px rgba(0, 150, 255, 0.3);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: transform 0.6s ease, opacity 0.6s ease, background-color 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
 }
 
-h2
-{
-    font-size: 50px;
-    font-family:'Consolas';
-    background-color: rgb(27, 9, 1);
-    color: rgb(168, 245, 255);
+.project-card.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-h3
-{
-    font-family: monospace;
-    font-size: larger;
-    color:rgb(255, 57, 57);
+.project-card:hover {
+    transform: translateY(0);
+    background-color: rgba(40, 40, 80, 0.9);
+    border-color: #ff6bcb; /* Simplified hover effect */
 }
 
-.right-aligned
-{
-    float: right;
+.project-card h2 {
+    margin-bottom: 0.8rem;
+    font-size: 1.8rem;
+    font-family: 'VT323', monospace; /* Unified font theme */
 }
 
-p
-{
-    width: 70%;
-    font-size: 20px;
-    font-family:'Courier New', Courier, monospace;
+/* Tech Stack Tags */
+.tech-stack {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.tech-stack span {
+    background: rgba(10, 30, 60, 0.9);
+    color: #a0c0ff;
+    padding: 6px 14px;
+    border-radius: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 1px solid #4a4a8a;
+    transition: all 0.3s ease;
+}
+
+.tech-stack span:hover {
+    color: #fff;
+    background: #6cf;
+    border-color: #6cf;
+}
+
+.project-card a.button {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 10px 20px;
+    border: 2px solid #6cf;
+    border-radius: 0;
+    color: #6cf;
     font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-a
-{
-    margin-right: 30px;
+.project-card a.button:hover {
+    background-color: #6cf;
+    color: #0a0a2e;
 }
 
-table
-{
-    width: 50%;
+/* Accessibility */
+header a:focus-visible,
+.project-card a.button:focus-visible,
+footer a:focus-visible {
+    outline: 2px solid #6cf;
+    outline-offset: 3px;
 }
 
-th
-{
-    width: 50%;
-    font-size: 50px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    color:rgb(170, 40, 30);
-    background-color: rgb(0, 179, 255);
+
+/* Education Table */
+.education-table-container {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
 }
 
-td
-{
-    font-family:monospace;
-    font-size: 30px;
+.education-table-container table {
+    border-collapse: collapse;
+    width: 85%;
+    background: rgba(20, 20, 60, 0.5);
+    border-radius: 0;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 150, 255, 0.2);
+    border: 2px solid #ff6bcb;
 }
 
-tr
-{
+.education-table-container th, .education-table-container td {
+    border: 1px solid #4a4a8a;
+    padding: 15px;
     text-align: center;
-    background-color: rgb(0, 208, 249);
 }
+
+.education-table-container th {
+    background-color: rgba(10, 10, 50, 0.8);
+    color: #ff6bcb;
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+    padding: 2rem;
+    background: rgba(10, 10, 50, 0.95);
+    text-align: center;
+    font-size: 1.1rem;
+    color: #aaa;
+    box-shadow: 0 -2px 12px rgba(0,0,0,0.4);
+    border-top: 2px solid #4a4a8a;
+}
+
+footer a {
+    color: #a2f2a2; /* Matched to new body color */
+    margin: 0 0.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ff6bcb;
+}
+
+.footer-separator {
+    color: #4a4a8a;
+    margin: 0 0.5rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 0.5rem;
+    }
+
+    h1 { font-size: 2.8rem; }
+    h2 { font-size: 1.8rem; }
+    p { font-size: 1.1rem; padding: 0 1rem; }
+    
+    .project-card {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+    .education-table-container table {
+        width: 95%;
+        font-size: 1rem;
+    }
+}
+
